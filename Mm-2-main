@@ -1,0 +1,41 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local executor =
+    identifyexecutor and identifyexecutor()
+    or getexecutorname and getexecutorname()
+    or "Unknown"
+
+local supported = {
+    ["synapse z"] = true,
+    ["wave"] = true,
+    ["volt"] = true,
+    ["seliware"] = true,
+    ["potassium"] = true,
+    ["solara"] = true,
+    ["xeno"] = true,
+    ["arceus x"] = true,
+    ["codex"] = true,
+}
+
+local found = false
+
+for name in pairs(supported) do
+    if string.find(string.lower(executor), name) then
+        found = true
+        break
+    end
+end
+
+if not found then
+    game.Players.LocalPlayer:Kick("Executor ไม่รองรับ")
+    return
+end
+
+if getgenv().language == "Th" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/refs/heads/main/Mm-2-Th.lua"))()
+elseif getgenv().language == "Eng" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/refs/heads/main/Mm-2-Eng.lua"))()
+else
+    LocalPlayer:Kick("Invalid Language! Use 'Th' or 'Eng'")
+end
