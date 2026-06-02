@@ -34,9 +34,9 @@ if not found then
 end
 
 if getgenv().language == "Th" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/main/Mm-2-Th.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/main/zeion-mm2-Th.txt"))()
 elseif getgenv().language == "Eng" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/main/Mm-2-Eng.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Teufkijdjd/Mm-2/main/zeion-mm2-Eng.txt"))()
 else
     LocalPlayer:Kick("Invalid Language! Use 'Th' or 'Eng'")
 end
