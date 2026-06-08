@@ -76,7 +76,7 @@ local Window =
         IconThemed = true,
         
         Title = "Zeion Hub | mm2 ",
-        Author = "by x2NYXZRLz",
+        Author = "by x2swtfxrlz",
         Folder = "zeion's",
         Size = UDim2.fromOffset(400, 400),
         MinSize = Vector2.new(560, 350),
